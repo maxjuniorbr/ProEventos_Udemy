@@ -440,6 +440,7 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+.vscode/
 
 # Visual Studio Code
 .vscode/*
@@ -462,3 +463,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# DB
+*.db
+*.db-shm
+*.db-wal
