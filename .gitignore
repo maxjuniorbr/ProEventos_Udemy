@@ -448,7 +448,7 @@ yarn-error.log
 *.code-workspace
 
 # Miscellaneous
-/.angular/cache
+.angular/*/cache/
 .sass-cache/
 /connect.lock
 /coverage
