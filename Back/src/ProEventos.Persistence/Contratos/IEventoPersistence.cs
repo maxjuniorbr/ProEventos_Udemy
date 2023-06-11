@@ -1,5 +1,5 @@
-using System.Threading.Tasks;
 using ProEventos.Domain;
+using System.Threading.Tasks;
 
 namespace ProEventos.Persistence.Contratos
 {

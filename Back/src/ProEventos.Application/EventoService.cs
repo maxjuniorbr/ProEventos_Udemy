@@ -1,8 +1,8 @@
-using System;
-using System.Threading.Tasks;
 using ProEventos.Application.Contratos;
 using ProEventos.Domain;
 using ProEventos.Persistence.Contratos;
+using System;
+using System.Threading.Tasks;
 
 namespace ProEventos.Application
 {
