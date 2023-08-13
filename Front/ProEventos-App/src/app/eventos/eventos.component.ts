@@ -1,7 +1,8 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { Evento } from '../models/Evento';
-import { EventoService } from '../services/evento.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ToastrService } from 'ngx-toastr';
+import { EventoService } from '../services/evento.service';
+import { Evento } from '../models/Evento';
 
 @Component({
   selector: 'app-eventos',
@@ -27,7 +28,8 @@ export class EventosComponent implements OnInit {
 
   constructor(
     private eventoService: EventoService,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private toastr: ToastrService
   ) {}
 
   public ngOnInit() {
@@ -63,6 +65,7 @@ export class EventosComponent implements OnInit {
 
   confirm(): void {
     this.modalRef?.hide();
+    this.toastr.success('O evento foi excluído com sucesso!', 'Operação realizada!');
   }
 
   decline(): void {
