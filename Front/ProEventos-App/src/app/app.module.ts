@@ -1,28 +1,29 @@
 // Angular Modules
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 
 // Third-party Modules
-import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 // Routing Module
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { NavComponent } from './nav/nav.component';
 import { PalestrantesComponent } from './palestrantes/palestrantes.component';
-
-// Services
-import { EventoService } from './services/evento.service';
 
 // Helpers
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
+
+// Services
+import { EventoService } from './services/evento.service';
 
 @NgModule({
   declarations: [
@@ -33,13 +34,14 @@ import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
     DateTimeFormatPipe,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     BrowserAnimationsModule,
+    BrowserModule,
     FormsModule,
-    CollapseModule.forRoot(),
+    HttpClientModule,
     BsDropdownModule.forRoot(),
+    CollapseModule.forRoot(),
+    ModalModule.forRoot(),
   ],
   providers: [EventoService],
   bootstrap: [AppComponent],
